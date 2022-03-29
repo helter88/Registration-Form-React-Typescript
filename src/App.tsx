@@ -1,9 +1,10 @@
 import React from 'react';
+import Register from './components/Register';
 
 function App() {
   return (
-    <div className="text-red-600">
-      <h1>Starting!</h1>
+    <div className='ml-2'>
+      <Register/>
     </div>
   );
 }
