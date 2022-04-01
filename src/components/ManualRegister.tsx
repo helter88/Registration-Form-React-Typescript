@@ -50,26 +50,8 @@ const ManualRegister = () => {
         }
     }
 
- 
-
-    type showMessageTypes = (name:string, validMessage:string, invalidMessageOne:string, invalidMessageTwo: string ) => string
-
-    const showMessage: showMessageTypes = (name, validMessage, invalidMessageOne, invalidMessageTwo) =>{
-        if(eval(name).length && eval(name + "WasClicked") && eval(name + "IsValid")){
-            return validMessage
-        }
-        if(eval(name).length && eval(name + "WasClicked") && !eval(name + "IsValid")){
-            return invalidMessageOne
-        }
-
-        if(!eval(name).length && eval(name + "WasClicked")){
-            return invalidMessageTwo
-        }
-            return validMessage
-
-        }
-
-    const diplayEmailMessage = showMessage('email',"","Wpisz poprawny adres email", "Wpisz swój adres email");
+// Tutaj jest błąd
+    const diplayEmailMessage = emailShowMessage("","Wpisz poprawny adres email", "Wpisz swój adres email");
     
     
 
