@@ -44,15 +44,6 @@ const ManualRegister = () => {
         
     }
 
-<<<<<<< HEAD
-    let showEmialMessage ;
-    if(email.length && emailWasClicked && emailIsValid){
-        showEmialMessage = ''
-    }
-    if(email.length && emailWasClicked && !emailIsValid){
-        showEmialMessage = "Wpisz poprawny adres email"
-    }
-=======
     const validatePassword = () => {
         if(password.length){
             password.length>=6 ? setPasswordIsValid(true): setPasswordIsValid(false)
@@ -60,7 +51,6 @@ const ManualRegister = () => {
     }
 
  
->>>>>>> 5ab7957 (refactor display worning to function)
 
     type showMessageTypes = (name:string, validMessage:string, invalidMessageOne:string, invalidMessageTwo: string ) => string
 
@@ -83,14 +73,10 @@ const ManualRegister = () => {
     
     
 
-<<<<<<< HEAD
-    let showPasswordMessage = passwordWasClicked ? <p className="text-sm text-rose-600">Wpisz swoje hasło i użyj minimum 6 znaków</p>: <p className="text-sm">Hasło powinno zawierać minimum 6 znaków</p>
-=======
     const displayPasswordMessage = showMessage('password',"Hasło powinno zawierać minimum 6 znaków","Hasło powinno zawierać minimum 6 znaków", "Wpisz swoje hasło i użyj minimum 6 znaków");
 
 
     const passwordColorWarning = `text-sm ${(passwordWasClicked && !passwordIsValid) ? "text-rose-600":''}`
->>>>>>> 5ab7957 (refactor display worning to function)
     
     return(
         <div className="flex flex-col">
@@ -99,15 +85,12 @@ const ManualRegister = () => {
             <p className="text-sm text-rose-600">{diplayEmailMessage}</p>
             <label htmlFor="password">Hasło</label>
             <input type='text' value={password} placeholder="Wpisz swoje hasło" id='password' onChange={passwordHandler} onBlur={passwordBlurHandler} className="bg-blue-100 max-w-xl p-1.5 border-2 my-3 rounded-lg" />
-<<<<<<< HEAD
             {showPasswordMessage}
             <p>Tworząc konto zgadzasz się na <a className="text-blue-400 hover:text-opacity-75" href="https://docs.google.com/document/d/1sU_9q96lgBOrmDSA7V-DOrIbmHXvL-c1pc6WLQqZ6fY/edit">regulamin</a> i <a className="text-blue-400 hover:text-opacity-75" href="https://docs.google.com/document/d/1kKOyWmcThexpCw5JbPvkdsoguF2wurqixAQwO1ELAjU/edit">politykę prywatności</a> Underline</p>
             <p>Po założeniu konta będziesz od nas otrzymywać wiadomości z poradami dotyczącymi nauki, a także ofertami specjalnymi od Underline. Możesz zrezygnować w każdej chwili.</p>
             <MainButton additionalStyle ='bg-blue-400 text-white hover:opacity-75'>Zarejestruj się</MainButton>
             <p>Masz już konto? <a className="text-blue-400 hover:text-opacity-75">Zaloguj się</a></p>
-=======
             <p className={passwordColorWarning}>{displayPasswordMessage}</p>
->>>>>>> 5ab7957 (refactor display worning to function)
         </div>
     )
 }
