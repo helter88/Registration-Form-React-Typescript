@@ -6,10 +6,10 @@ import React, { useEffect, useState } from "react";
 const ManualRegister = () => {
     
     const [emailShowMessage, emailBind] =useValidInput("email");
-    const [passwordwShowMessage, passwordBind, passwordWasClicked, passwordIsValid ] =useValidInput("password");
+    const [passwordShowMessage, passwordBind, passwordWasClicked, passwordIsValid ] =useValidInput("password");
 
     const diplayEmailMessage = emailShowMessage("","Wpisz poprawny adres email", "Wpisz swój adres email");
-    const displayPasswordMessage = passwordwShowMessage("Hasło powinno zawierać minimum 6 znaków","Hasło powinno zawierać minimum 6 znaków", "Wpisz swoje hasło i użyj minimum 6 znaków");
+    const displayPasswordMessage = passwordShowMessage("Hasło powinno zawierać minimum 6 znaków","Hasło powinno zawierać minimum 6 znaków", "Wpisz swoje hasło i użyj minimum 6 znaków");
 
 
     const passwordColorWarning = `text-sm ${(passwordWasClicked && !passwordIsValid) ? "text-rose-600":''}`
@@ -27,6 +27,7 @@ const ManualRegister = () => {
             <MainButton additionalStyle ='bg-blue-400 text-white hover:opacity-75'>Zarejestruj się</MainButton>
             <p>Masz już konto? <a className="text-blue-400 hover:text-opacity-75">Zaloguj się</a></p>
             <input type='text' {...passwordBind} placeholder="Wpisz swoje hasło" id='password' className="bg-blue-100 max-w-xl p-1.5 border-2 my-3 rounded-lg" />
+            <input type='password' {...passwordBind} placeholder="Wpisz swoje hasło" id='password' className="bg-blue-100 max-w-xl p-1.5 border-2 my-3 rounded-lg" />
             <p className={passwordColorWarning}>{displayPasswordMessage}</p>
         </div>
     )
