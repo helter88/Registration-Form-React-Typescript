@@ -5,57 +5,11 @@ import React, { useEffect, useState } from "react";
 
 const ManualRegister = () => {
     
-    const [emailWasClicked, setEmailWasClicked]= useState(false);
-    const [passwordWasClicked, setPasswordWasClicked]= useState(false);
-    const [email, setEmail] = useState("");
-    const [password, setPassword]= useState("");
-    const [emailIsValid, setEmailIsValid]= useState(false);
-    const [passwordIsValid, setPasswordIsValid]= useState<string|boolean>('beginnig');
+    const [emailShowMessage, emailBind] =useValidInput("email");
+    const [passwordwShowMessage, passwordBind, passwordWasClicked, passwordIsValid ] =useValidInput("password");
 
-    const emailBlurHandler= () =>{
-        setEmailWasClicked(true);
-        validateEmail();
-    }
-
-    const passwordBlurHandler = () => {
-        setPasswordWasClicked(true);
-        
-    }
-
-    const emailHandler = (e: React.ChangeEvent<HTMLInputElement> ) => {
-        setEmail(e.target.value);
-    }
-
-    useEffect(() =>{
-        if(emailWasClicked){
-            validateEmail();  
-        }
-    },[email])
-
-    const passwordHandler=(e: React.ChangeEvent<HTMLInputElement> ) => {
-        setPassword(e.target.value);
-    }
-
-    const validateEmail = () => {
-        const regexEmial = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        if(email.length){
-        setEmailIsValid(regexEmial.test(email));  
-        }
-        
-    }
-
-    const validatePassword = () => {
-        if(password.length){
-            password.length>=6 ? setPasswordIsValid(true): setPasswordIsValid(false)
-        }
-    }
-
-// Tutaj jest błąd
     const diplayEmailMessage = emailShowMessage("","Wpisz poprawny adres email", "Wpisz swój adres email");
-    
-    
-
-    const displayPasswordMessage = showMessage('password',"Hasło powinno zawierać minimum 6 znaków","Hasło powinno zawierać minimum 6 znaków", "Wpisz swoje hasło i użyj minimum 6 znaków");
+    const displayPasswordMessage = passwordwShowMessage("Hasło powinno zawierać minimum 6 znaków","Hasło powinno zawierać minimum 6 znaków", "Wpisz swoje hasło i użyj minimum 6 znaków");
 
 
     const passwordColorWarning = `text-sm ${(passwordWasClicked && !passwordIsValid) ? "text-rose-600":''}`
@@ -72,6 +26,7 @@ const ManualRegister = () => {
             <p>Po założeniu konta będziesz od nas otrzymywać wiadomości z poradami dotyczącymi nauki, a także ofertami specjalnymi od Underline. Możesz zrezygnować w każdej chwili.</p>
             <MainButton additionalStyle ='bg-blue-400 text-white hover:opacity-75'>Zarejestruj się</MainButton>
             <p>Masz już konto? <a className="text-blue-400 hover:text-opacity-75">Zaloguj się</a></p>
+            <input type='text' {...passwordBind} placeholder="Wpisz swoje hasło" id='password' className="bg-blue-100 max-w-xl p-1.5 border-2 my-3 rounded-lg" />
             <p className={passwordColorWarning}>{displayPasswordMessage}</p>
         </div>
     )

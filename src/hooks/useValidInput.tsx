@@ -1,17 +1,20 @@
 import {useState, useEffect} from 'react'
 
-interface validInputType{
-    name: "email" | "password"
-}
 
-const useValidInput = () => {
+const useValidInput = (props: "email" | "password" ) => {
     const [itemWasClicked, setItemWasClicked]= useState(false);
     const [message, setMessage] = useState("");
     const [itemIsValid, setItemIsValid]= useState(false);
 
     useEffect(() =>{
         if(itemWasClicked){
-            validateEmail();  
+            if(props === "email"){
+               validateEmail();   
+            }
+            if(props === "password"){
+                validatePassword();
+            }
+            
         }
     },[message])
 
@@ -31,6 +34,12 @@ const useValidInput = () => {
         setItemIsValid(regexEmial.test(message));  
         }
         
+    }
+
+    const validatePassword = () => {
+        if(message.length){
+            message.length>=6 ? setItemIsValid(true): setItemIsValid(false)
+        }
     }
 
     type showMessageTypes = (validMessage:string, invalidMessageOne:string, invalidMessageTwo: string ) => string
@@ -56,7 +65,7 @@ const useValidInput = () => {
         onChange: itemHandler,
         onBlur: itemBlurHandler,
         }
-    return [showMessage, bind] as const
+    return [showMessage, bind, itemWasClicked, itemIsValid ] as const
 }
 
 export default useValidInput
