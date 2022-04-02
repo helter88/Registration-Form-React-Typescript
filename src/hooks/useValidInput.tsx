@@ -1,5 +1,9 @@
 import {useState, useEffect} from 'react'
 
+interface validInputType{
+    name: "email" | "password"
+}
+
 const useValidInput = () => {
     const [itemWasClicked, setItemWasClicked]= useState(false);
     const [message, setMessage] = useState("");
@@ -52,7 +56,7 @@ const useValidInput = () => {
         onChange: itemHandler,
         onBlur: itemBlurHandler,
         }
-    return [showMessage, bind]
+    return [showMessage, bind] as const
 }
 
 export default useValidInput

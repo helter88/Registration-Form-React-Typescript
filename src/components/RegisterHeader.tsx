@@ -1,4 +1,4 @@
 const RegisterHeader = ()=>{
-    return <p>Underline</p>
+    return <p >Underline</p>
 }
 export default RegisterHeader;
