@@ -7,7 +7,7 @@ interface RegisterHeaderTypes {
 const RegisterHeader = (props: RegisterHeaderTypes )=>{
     return (
         <div className={props.styles}>
-            <img src={underlineLogoLink} alt="Underline logo" />
+            <img className="w-24 h-7" src={underlineLogoLink} alt="Underline logo" />
         </div>
     )
 }
