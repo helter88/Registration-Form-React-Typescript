@@ -11,6 +11,7 @@ const RegisterForm = () => {
     <h3 className="p-1.5">Zarejestruj się</h3>
     <SocialMediaButton logo='' text=''>Kontynuj z Google</SocialMediaButton>
     <SocialMediaButton logo='' text=''>Kontynuj z Facebook</SocialMediaButton>
+    <SocialMediaButton logo='' text=''>Kontynuj z Apple</SocialMediaButton>
     <ManualRegister />
     </div>)
 }
