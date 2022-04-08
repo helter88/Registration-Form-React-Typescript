@@ -3,8 +3,11 @@ import Register from './components/Register';
 
 function App() {
   return (
-    <div className='ml-2'>
-      <Register/>
+    <div>
+      <div>
+         <Register/>
+      </div>
+     
     </div>
   );
 }
