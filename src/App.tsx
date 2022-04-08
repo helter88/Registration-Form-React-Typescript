@@ -3,8 +3,8 @@ import Register from './components/Register';
 
 function App() {
   return (
-    <div>
-      <div>
+    <div className='max-w-full flex justify-center'>
+      <div className='max-w-md '>
          <Register/>
       </div>
      
