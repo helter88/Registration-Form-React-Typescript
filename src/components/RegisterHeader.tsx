@@ -9,10 +9,11 @@ interface RegisterHeaderTypes {
 const RegisterHeader = (props: RegisterHeaderTypes )=>{
     return (
         <div className={props.styles}>
-            <div className="flex">
+            <div className="flex w-full justify-center relative">
                <img className="w-24 h-7" src={underlineLogoLink} alt="Underline logo" />
-               <Dropdown />
+                  <Dropdown style=" right-8 -top-2 absolute"/> 
             </div>
+            
             
         </div>
     )

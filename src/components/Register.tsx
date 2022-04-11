@@ -3,7 +3,7 @@ import RegisterHeader from "./RegisterHeader";
 
 const Register = () =>{
     return(<>
-        <RegisterHeader styles="h-56 flex justify-center"/>
+        <RegisterHeader styles="h-56 flex items-center"/>
         <RegisterForm />
     </>) 
 }

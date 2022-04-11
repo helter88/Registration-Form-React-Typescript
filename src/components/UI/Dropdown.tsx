@@ -1,10 +1,17 @@
 import React from 'react'
 import  polishFlag  from '../../icons/flags/poland.svg';
 
-const Dropdown: React.FC= () => {
+interface DropdownType {
+  style: string
+}
+
+const Dropdown: React.FC<DropdownType>= (props) => {
   return (
-   <div className='p-1'>
-       <img className= "h-8" src={polishFlag} alt='polishFlag' />
+   <div className={props.style}>
+      <div className='border rounded-lg p-2 py-3'>
+          <img className= "h-4" src={polishFlag} alt='polishFlag' />
+      </div>
+       
    </div>
   )
 }
