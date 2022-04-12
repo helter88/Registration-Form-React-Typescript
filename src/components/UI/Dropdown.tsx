@@ -12,8 +12,8 @@ const Dropdown: React.FC<DropdownType>= (props) => {
       <div className='border rounded-lg p-2 py-3'>
           <img className= "h-4" src={polishFlag} alt='polishFlag' />
       </div>
-      <ul className='rounded-md absolute w-48 shadow-md'>
-        <li>
+      <ul className='rounded-md absolute w-48 shadow-md py-2'>
+        <li className=''>
           <a className='flex ml-4'> <img className= "h-4" src={polishFlag} alt='polishFlag' /> <p className ="ml-2 font-semibold">Polski</p></a>
           </li>
         <li>

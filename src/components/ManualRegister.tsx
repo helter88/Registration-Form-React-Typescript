@@ -16,10 +16,10 @@ const ManualRegister = () => {
     return(
         <div className="flex flex-col">
             <label htmlFor="email">Adres email</label>
-            <input type='text'{...emailBind} placeholder="Wpisz swój adres email" id='email' className="bg-blue-100 max-w-xl p-1.5 border-2 my-3 rounded-lg" />
+            <input type='text'{...emailBind} placeholder="Wpisz swój adres email" id='email' className="bg-slate-100 max-w-xl p-1.5 my-3 rounded-lg" />
             <p className="text-sm text-rose-600">{diplayEmailMessage}</p>
             <label htmlFor="password">Hasło</label>
-            <input type='password' {...passwordBind} placeholder="Wpisz swoje hasło" id='password' className="bg-blue-100 max-w-xl p-1.5 border-2 my-3 rounded-lg" />
+            <input type='password' {...passwordBind} placeholder="Wpisz swoje hasło" id='password' className="bg-slate-100 max-w-xl p-1.5 my-3 rounded-lg" />
             <p className={passwordColorWarning}>{displayPasswordMessage}</p>
 
             <p>Tworząc konto zgadzasz się na <a className="text-blue-400 hover:text-opacity-75" href="https://docs.google.com/document/d/1sU_9q96lgBOrmDSA7V-DOrIbmHXvL-c1pc6WLQqZ6fY/edit">regulamin</a> i <a className="text-blue-400 hover:text-opacity-75" href="https://docs.google.com/document/d/1kKOyWmcThexpCw5JbPvkdsoguF2wurqixAQwO1ELAjU/edit">politykę prywatności</a> Underline</p>
