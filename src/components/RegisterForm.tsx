@@ -1,17 +1,16 @@
 import ManualRegister from "./ManualRegister";
 import SocialMediaButton from "./UI/SocialMediaButton";
+import googleLogo from "../icons/logos/Google__logo.svg"
+import facebookLogo from "../icons/logos/facebook-logo.svg"
+import appleLogo from "../icons/logos/apple_logo.svg"
 
-// const google = <svg className="icon-facebook">
-//     <use xlink
-    
-// </svg>
 
 const RegisterForm = () => {
     return(<div className="flex flex-col">
-    <h3 className="p-1.5 text-xl font-bold">Zarejestruj się</h3>
-    <SocialMediaButton logo='' text=''>Kontynuj z Google</SocialMediaButton>
-    <SocialMediaButton logo='' text=''>Kontynuj z Facebook</SocialMediaButton>
-    <SocialMediaButton logo='' text=''>Kontynuj z Apple</SocialMediaButton>
+    <h3 className="p-1.5 text-xl font-bold text-slate-800">Zarejestruj się</h3>
+    <SocialMediaButton logo={googleLogo} alt="Google logo">Kontynuj z Google</SocialMediaButton>
+    <SocialMediaButton logo= {facebookLogo} alt="Facebook logo">Kontynuj z Facebook</SocialMediaButton>
+    <SocialMediaButton logo= {appleLogo} alt="AppleLogo">Kontynuj z Apple</SocialMediaButton>
     <ManualRegister />
     </div>)
 }
