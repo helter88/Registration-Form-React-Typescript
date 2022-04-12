@@ -4,7 +4,7 @@ import Register from './components/Register';
 function App() {
   return (
     <div className='max-w-full flex justify-center'>
-      <div className='max-w-sm '>
+      <div className='max-w-[26rem] '>
          <Register/>
       </div>
      

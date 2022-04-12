@@ -22,10 +22,10 @@ const ManualRegister = () => {
             <input type='password' {...passwordBind} placeholder="Wpisz swoje hasło" id='password' className="bg-slate-100 max-w-xl p-3 my-3 rounded-lg text-sm text-slate-500 placeholder-slate-500 outline-[1px] outline-blue-400 " />
             <p className={passwordColorWarning}>{displayPasswordMessage}</p>
 
-            <p>Tworząc konto zgadzasz się na <a className="text-blue-400 hover:text-opacity-75" href="https://docs.google.com/document/d/1sU_9q96lgBOrmDSA7V-DOrIbmHXvL-c1pc6WLQqZ6fY/edit">regulamin</a> i <a className="text-blue-400 hover:text-opacity-75" href="https://docs.google.com/document/d/1kKOyWmcThexpCw5JbPvkdsoguF2wurqixAQwO1ELAjU/edit">politykę prywatności</a> Underline</p>
-            <p>Po założeniu konta będziesz od nas otrzymywać wiadomości z poradami dotyczącymi nauki, a także ofertami specjalnymi od Underline. Możesz zrezygnować w każdej chwili.</p>
-            <MainButton additionalStyle ='bg-blue-400 text-white hover:opacity-75'>Zarejestruj się</MainButton>
-            <p>Masz już konto? <a className="text-blue-400 hover:text-opacity-75">Zaloguj się</a></p>
+            <p className="mt-6 text-xs text-slate-500 font-medium">Tworząc konto zgadzasz się na <a className="text-blue-400 hover:text-opacity-75" href="https://docs.google.com/document/d/1sU_9q96lgBOrmDSA7V-DOrIbmHXvL-c1pc6WLQqZ6fY/edit">regulamin</a> i <a className="text-blue-400 hover:text-opacity-75" href="https://docs.google.com/document/d/1kKOyWmcThexpCw5JbPvkdsoguF2wurqixAQwO1ELAjU/edit">politykę prywatności</a> Underline</p>
+            <p className="mt-6 text-xs text-slate-500 font-medium">Po założeniu konta będziesz od nas otrzymywać wiadomości z poradami dotyczącymi nauki, a także ofertami specjalnymi od Underline. Możesz zrezygnować w każdej chwili.</p>
+            <MainButton additionalStyle ='mt-6 py-3 text-xs font-semibold bg-blue-500 opacity-80 text-white hover:opacity-60'>Zarejestruj się</MainButton>
+            <p className="my-6 w-full flex justify-center text-sm text-slate-500">Masz już konto? <a className="text-blue-400 hover:text-opacity-75 ml-1 font-medium">Zaloguj się</a></p>
             
         </div>
     )
