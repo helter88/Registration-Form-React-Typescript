@@ -14,8 +14,8 @@ const ManualRegister = () => {
     const passwordColorWarning = `text-sm ${(passwordWasClicked && !passwordIsValid) ? "text-rose-600":''}`
     
     return(
-        <div className="flex flex-col">
-            <label htmlFor="email">Adres email</label>
+        <div className="flex flex-col border-t mt-3">
+            <label className="mt-6 text-xs" htmlFor="email">Adres email</label>
             <input type='text'{...emailBind} placeholder="Wpisz swój adres email" id='email' className="bg-slate-100 max-w-xl p-1.5 my-3 rounded-lg" />
             <p className="text-sm text-rose-600">{diplayEmailMessage}</p>
             <label htmlFor="password">Hasło</label>
