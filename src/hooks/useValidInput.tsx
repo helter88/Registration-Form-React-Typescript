@@ -21,7 +21,13 @@ const useValidInput = (props: "email" | "password" ) => {
 
     const itemBlurHandler= () =>{
         setItemWasClicked(true);
-        validateEmail();
+        if (props ==="email"){
+          validateEmail();  
+        }
+        if (props ==="password"){
+            validatePassword();  
+          }
+        
     }
     
     const itemHandler = (e: React.ChangeEvent<HTMLInputElement> ) => {
@@ -52,6 +58,7 @@ const useValidInput = (props: "email" | "password" ) => {
         if(message.length && itemWasClicked && !itemIsValid){
             return invalidMessageOne
         }
+        
 
         if(!message.length && itemWasClicked){
             return invalidMessageTwo
@@ -65,7 +72,7 @@ const useValidInput = (props: "email" | "password" ) => {
         onChange: itemHandler,
         onBlur: itemBlurHandler,
         }
-    return [showMessage, bind, itemWasClicked, itemIsValid ] as const
+    return [showMessage, bind, itemWasClicked, itemIsValid, setItemWasClicked] as const
 }
 
 export default useValidInput

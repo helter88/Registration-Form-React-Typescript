@@ -5,13 +5,13 @@ import MainButton from "./UI/MainButton";
 
 const ManualRegister = () => {
     
-    const [emailShowMessage, emailBind, emailWasClicked, emailIsValid] =useValidInput("email");
-    const [passwordShowMessage, passwordBind, passwordWasClicked, passwordIsValid ] =useValidInput("password");
+    const [emailShowMessage, emailBind, emailWasClicked, emailIsValid, setEmailWasClicked] =useValidInput("email");
+    const [passwordShowMessage, passwordBind, passwordWasClicked, passwordIsValid, setPasswordWasClicked ] =useValidInput("password");
     const [buttonIsValid, setButtonIsValid] = useState(true);
 
     useEffect(()=> {
-        formIsValid()
-    },[emailWasClicked, passwordWasClicked, emailIsValid, passwordIsValid])
+        formIsValid();
+    },[emailWasClicked, passwordWasClicked, emailIsValid, passwordIsValid ])
 
     const diplayEmailMessage = emailShowMessage("","Wpisz poprawny adres email", "Wpisz swój adres email");
     const displayPasswordMessage = passwordShowMessage("Hasło powinno zawierać minimum 6 znaków","Hasło powinno zawierać minimum 6 znaków", "Wpisz swoje hasło i użyj minimum 6 znaków");
@@ -43,8 +43,24 @@ const ManualRegister = () => {
     }
 
     const formHandler = () => {
+
         if(!emailWasClicked && !passwordWasClicked){
-            setButtonIsValid(false);  
+            setButtonIsValid(false);
+            setEmailWasClicked(true);
+            setPasswordWasClicked(true);
+            return;
+        }
+        if(emailWasClicked && !passwordWasClicked){
+            setButtonIsValid(false);
+            setEmailWasClicked(true);
+            setPasswordWasClicked(true);
+            return;
+        }
+        if(passwordWasClicked && !emailWasClicked){
+            setButtonIsValid(false);
+            setEmailWasClicked(true);
+            setPasswordWasClicked(true);
+            return;
         }
     }
     
