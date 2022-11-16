@@ -1,5 +1,5 @@
 import ManualRegister from "./ManualRegister";
-import SocialMediaButton from "./UI/SocialMediaButton";
+import SocialMediaButton from "./ui/SocialMediaButton";
 import googleLogo from "../icons/logos/Google__logo.svg"
 import facebookLogo from "../icons/logos/facebook-logo.svg"
 import appleLogo from "../icons/logos/apple_logo.svg"

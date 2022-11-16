@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import useValidInput from "../hooks/useValidInput";
-import MainButton from "./UI/MainButton";
+import MainButton from "./ui/MainButton";
 
 const ManualRegister = () => {
     

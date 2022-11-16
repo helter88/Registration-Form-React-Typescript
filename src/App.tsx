@@ -1,6 +1,6 @@
 import React from 'react';
 import Register from './components/Register';
-import Background from './components/UI/Background';
+import Background from './components/ui/Background';
 
 function App() {
   return (
