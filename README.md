@@ -1,4 +1,4 @@
-# Registrtion Form for Underline start-up
+# Registration Form for Underline start-up
 
 <img src="./readme_images/Registration form.png" alt="project image">
 <br />
