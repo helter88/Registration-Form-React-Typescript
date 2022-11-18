@@ -17,6 +17,7 @@ The registration form wrote in React and Typescript, styling made in Tailwind fo
 - Registration button with validation
 - Redirect to correspondent page when terms and conditions are clicked
 - Redirect to correspondent page when privacy policy is clicked
+- Dropdown menu with languages opening when the flag is hovered
 
 ## Built using
 
