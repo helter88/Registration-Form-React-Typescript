@@ -1,8 +1,8 @@
 # Registration Form for Underline start-up
 
 <img src="./readme_images/Registration form.png" alt="project image">
-<br />
-> See demo live :
+
+> See demo live : [click here](https://registration-form-underline.netlify.app 'click to open link')
 
 ## Description
 
